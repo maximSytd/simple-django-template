@@ -1,5 +1,6 @@
 ```bash
-uv run python manage.py makemigrations & python manage.py migrate & python manage.py runserver
+uv sync & source .venv/bin/activate
+python manage.py makemigrations & python manage.py migrate & python manage.py runserver
 
 python manage.py createsuperuser # root root@localhost root
 ```
