@@ -1,3 +1,3 @@
-app_label = "examples"
+app_name = "examples"
 
 urlpatterns = []
