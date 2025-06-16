@@ -31,7 +31,7 @@
                 {% if user.avatar_thumbnail %}
                     <img src="{{ request.user.avatar_thumbnail.url }}" alt="Profile Photo" width="50" height="auto" class="img-fluid rounded-circle me-3" />
                 {% else %}
-                    <img src="https://avatar.iran.liara.run/username?username={{ request.user.username }}&background=800000&color=FFFFFF&length=1" alt="Profile Photo" width="50" height="auto" class="img-fluid rounded-circle me-3" />
+                    <img src="{% static 'empty_avatar.webp' %}" alt="Profile Photo" width="50" height="auto" class="img-fluid rounded-circle me-3" />
                 {% endif %}
                 <div class="dropdown me-5">
                     <button class="btn btn-outline-light dropdown-toggle" type="button" id="settingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
