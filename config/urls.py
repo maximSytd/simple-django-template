@@ -14,10 +14,6 @@ urlpatterns = [
         "users/",
         include("apps.users.urls"),
     ),
-    path(
-        "examples/",
-        include("apps.examples.urls"),
-    ),
 ]
 
 urlpatterns += (
