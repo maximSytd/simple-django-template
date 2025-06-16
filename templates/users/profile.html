@@ -93,7 +93,7 @@
                 <div class="d-flex align-items-center p-3">
                     <div class="avatar-container me-3">
                         {% if user.avatar %}
-                            <img src="{{ user.avatar.url }}" alt="Аватар пользователя" class="avatar-image">
+                            <img src="{{ user.avatar.url }}" alt="User avatar" class="avatar-image">
                         {% else %}
                             <img src="{% static 'empty_avatar.webp' %}" alt="Profile Photo" class="avatar-image" />
                         {% endif %}
@@ -116,9 +116,6 @@
             <div class="card options-container">
                 <div class="card-header">
                     <h5>{% trans "Options" %}</h5>
-                </div>
-                <div class="options-container">
-                    <a href="{% url 'password_reset' %}" class="btn btn-primary">{% trans "Reset password" %}</a>
                 </div>
             </div>
         </div>
