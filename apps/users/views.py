@@ -7,6 +7,8 @@ from .forms import UserInitialsUpdateForm
 
 
 class ProfileView(LoginRequiredMixin, DetailView):
+    """Profile class-based view."""
+
     template_name = "users/profile.html"
     model = User
     context_object_name = "user"
@@ -16,6 +18,8 @@ class ProfileView(LoginRequiredMixin, DetailView):
 
 
 class UserInitialsUpdateView(LoginRequiredMixin, UpdateView):
+    """User initials update class-based view."""
+
     template_name = "users/update_user.html"
     model = User
     context_object_name = "user"
@@ -23,12 +27,14 @@ class UserInitialsUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_object(self, queryset = None):
         return self.request.user
-    
+
     def get_success_url(self):
         return reverse_lazy("users:profile")
-    
+
 
 class UserAvatarUpdateView(LoginRequiredMixin, UpdateView):
+    """User avatar update class-based view."""
+
     fields = ("avatar",)
     model = User
 

@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 from ..models import User
 
@@ -7,7 +8,7 @@ class UserInitialsUpdateForm(forms.ModelForm):
     """User update form."""
 
     first_name = forms.CharField(
-        label="Введите имя",
+        label=_("Username"),
         widget=forms.TextInput(
             attrs={
                 "class": "form-control w-50",
@@ -15,7 +16,7 @@ class UserInitialsUpdateForm(forms.ModelForm):
         ),
     )
     last_name = forms.CharField(
-        label="Введите фамилию",
+        label=_("last_name"),
         widget=forms.TextInput(
             attrs={
                 "class": "form-control w-50",

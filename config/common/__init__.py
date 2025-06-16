@@ -6,7 +6,6 @@ from .middleware import *
 from .paths import *
 from .storage import *
 from .templates import *
-from .smtp import *
 
 APPEND_SLASH = False
 ALLOWED_HOSTS = ["*"]

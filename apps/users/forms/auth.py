@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
-
+from django.utils.translation import gettext_lazy as _
 
 class CustomLoginForm(AuthenticationForm):
     """Custom login from."""
@@ -9,19 +9,19 @@ class CustomLoginForm(AuthenticationForm):
         widget=forms.TextInput(
             attrs={
                 "class": "form-control",
-                "placeholder": "Введите логин",
+                "placeholder": _("Input username"),
             }
         ),
-        label="Логин",
+        label=_("Username"),
         required=False,
     )
     password = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
             "class": "form-control",
-            "placeholder": "Введите ваш пароль",
+            "placeholder": _("Input password"),
             }
         ),
-        label="Пароль",
+        label=_("Password"),
         required=False,
     )
